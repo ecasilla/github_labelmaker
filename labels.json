@@ -78,6 +78,29 @@
   {
     "name": "type: feature request",
     "color": "8D5BFF"
+  },
+  {
+    "name": "type: chore",
+    "color": "fef2c0"
+  },
+  {
+    "name": "type: rfc",
+    "color": "cc317c"
+  },
+  {
+    "name": "type: security",
+    "color": "EE3F46"
+  },
+  {
+    "name": "type: ux",
+    "color": "FFC274"
+  },
+  {
+    "name": "type: watchlist",
+    "color": "fbca04"
+  },
+  {
+    "name": "type: copy",
+    "color": "FFC274"
   }
 ]
-
