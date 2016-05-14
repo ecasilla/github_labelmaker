@@ -62,8 +62,6 @@ func main() {
 		},
 	}
 
-	app.Action = action
-
 	app.Run(os.Args)
 
 	url := base + user + "/" + repo + "/" + resource + "?access_token=" + token
@@ -76,14 +74,17 @@ func main() {
 
 	if err != nil {
 		fmt.Printf("error %v", err)
+		panic(err)
 	}
 
 	if err := json.Unmarshal(file, &labels); err != nil {
 		fmt.Printf("error %v", err)
+		panic(err)
 	}
 
 	if err := createLabels(url, labels); err != nil {
 		fmt.Printf("error %v", err)
+		panic(err)
 	}
 }
 func createLabels(url string, l []Label) error {
@@ -116,13 +117,6 @@ func createLabels(url string, l []Label) error {
 		body, _ := ioutil.ReadAll(resp.Body)
 		fmt.Println("Response Body:", string(body))
 		fmt.Println()
-	}
-	return nil
-}
-
-func action(ctx *cli.Context) error {
-	if !ctx.Bool("filePath") {
-		return cli.NewExitError("A file path is need to create labels", 1)
 	}
 	return nil
 }
