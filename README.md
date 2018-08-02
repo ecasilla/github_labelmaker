@@ -1,18 +1,18 @@
-#Github Label Maker
+# Github Label Maker
 
 Add Github labels automatically.
 
 It's very useful when using Zenhub.io or managing a open source project that you tame the issue beast with labels. But adding multiple labels across different projects is cumbersome. BUT NOT ANYMORE.
 
-#Deps
+# Deps
 Please have go installed  
 [GoLang](https://golang.org/doc/install)
 
-#Install
+# Install
 `go get github.com/ecasilla/github_labelmaker`
 
 
-###Examples
+### Examples
 See my [example file](https://github.com/ecasilla/github_labelmaker/blob/master/labels.json)
 
 ```
@@ -22,7 +22,7 @@ See my [example file](https://github.com/ecasilla/github_labelmaker/blob/master/
 ]
 ```
 
-##Usage
+## Usage
 `github_labelmaker -f labels.json -u octocat -r repo`
 
 ```
@@ -35,7 +35,7 @@ OPTIONS:
    --version, -v	print the version
 ```
 
-##Github Token
+## Github Token
 You will need a personal access token in order to authenticate against the Github api   
 [Token Docs](https://help.github.com/articles/creating-an-access-token-for-command-line-use/)
 
@@ -44,10 +44,10 @@ Once you have your token your can add them to the .env file [here](https://githu
 or create a env variable  
 `export GITHUB_TOKEN="token"`
 
-##GitHub Enterprise configuration
+## GitHub Enterprise configuration
 TODO:
 
-##Export from GitHub website
+## Export from GitHub website
 
 Here is a snippet to be able to export Github labels from the labels page of a project
 
