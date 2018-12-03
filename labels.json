@@ -1,11 +1,13 @@
 [
   {
     "name": "level: high-priority",
-    "color": "eb6420"
+    "color": "eb6420",
+    "description": "High priority level"
   },
   {
     "name": "level: low-priority",
-    "color": "fad8c7"
+    "color": "fad8c7",
+    "description": "Low priority level"
   },
   {
     "name": "PR: needs documentation",
