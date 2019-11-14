@@ -20,6 +20,7 @@ const (
 type Label struct {
 	Name  string `json:"name"`
 	Color string `json:"color"`
+	Description string `json:"description,omitempty"`
 }
 
 func main() {
@@ -101,6 +102,8 @@ func createLabels(url string, l []Label) error {
 			return err
 		}
 		req.Header.Set("Content-Type", "application/json")
+    // See https://developer.github.com/v3/issues/labels/#create-a-label
+		req.Header.Set("Accept", "application/vnd.github.symmetra-preview+json")
 
 		client := &http.Client{}
 		resp, err := client.Do(req)
